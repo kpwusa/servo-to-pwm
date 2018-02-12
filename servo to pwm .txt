@@ -1,0 +1,20 @@
+//servo signal to pwm switcher
+// arduino or attiny
+
+
+void setup()
+{
+int duration = 1000
+int ServoPin1 = 1
+
+int output_pwm = 0
+int outputPin1 = 3
+
+
+void loop()
+{
+duration = pulseIn(ServoPin1, HIGH, 22000); // once pin high get time of pulse, if more than 22ms signal is invalid
+//constrian?
+output_pwm = map(duration, 1000, 2000, 0, 255); map signal 
+analogWrite(outputPin1, output_pwm); output the signal
+}
